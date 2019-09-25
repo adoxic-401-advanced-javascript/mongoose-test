@@ -6,7 +6,7 @@
 
 ### Links and Resources
 * [submission PR](https://github.com/adoxic-401-advanced-javascript/mongoose-test/pull/1)
-* [travis](https://travis-ci.com/adoxic-401-advanced-javascript/mongoose-test/builds/129019139)
+* [travis]https://travis-ci.com/adoxic-401-advanced-javascript/mongoose-test/builds/129021352)
 
 ### Setup
 #### `.env` requirements
