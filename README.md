@@ -5,8 +5,9 @@
 ### Author: Maeve Griffin
 
 ### Links and Resources
-* [submission PR](https://github.com/adoxic-401-advanced-javascript/mongoose-test/pull/1)
-* [travis]https://travis-ci.com/adoxic-401-advanced-javascript/mongoose-test/builds/129021352)
+* [submission PR](https://github.com/adoxic-401-advanced-javascript/mongoose-test/pull/2)
+* [travis](https://travis-ci.com/adoxic-401-advanced-javascript/mongoose-test/builds/129021352)
+* [heroku](https://desolate-lake-52490.herokuapp.com/)
 
 ### Setup
 #### `.env` requirements
