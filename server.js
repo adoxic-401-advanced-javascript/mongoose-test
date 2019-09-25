@@ -1,53 +1,16 @@
+// loads the .env environment variables
 require('dotenv').config();
-require('./lib/connect')();
-const express = require('express');
-const app = express();
-const Bird = require('./lib/models/bird');
+// connect to mongo
+require('./lib/connect')(process.env.MONGODB_URI);
 
-app.use(express.json());
+// require the app http event handler
+const app = require('./lib/app');
+// create an http server that uses app
+const { createServer } = require('http');
+const server = createServer(app);
 
-app.get('/api/birds', (req, res, next) => {
-  Bird.find()
-    .then(birds => {
-      res.json(birds);
-    })
-    .catch(next);
+// start the server by listening on a port
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`Listening on ${PORT}`);
 });
-
-app.get('/api/birds/:id', (req, res, next) => {
-  Bird.findById(req.params.id)
-    .then(bird => {
-      res.json(bird);
-    })
-    .catch(next);
-});
-
-app.post('/api/birds', (req, res, next) => {
-  Bird.create(req.body)
-    .then(bird => {
-      res.json(bird);
-    })
-    .catch(next);
-});
-
-app.put('/api/birds/:id', (req, res, next) => {
-  Bird.findByIdAndUpdate(
-    req.params.id,
-    req.body,
-    { new: true }
-  )
-    .then(bird => {
-      res.json(bird);
-    })
-    .catch(next);
-});
-
-app.delete('/api/birds/:id', (req, res, next) => {
-  Bird.findByIdAndRemove(req.params.id)
-    .then(removed => {
-      res.json(removed);
-    })
-    .catch(next);
-});
-
-app.listen(3001, () => console.log('server running on 3000'));
