@@ -6,7 +6,7 @@
 
 ### Links and Resources
 * [submission PR](https://github.com/adoxic-401-advanced-javascript/mongoose-test/pull/2)
-* [travis](https://travis-ci.com/adoxic-401-advanced-javascript/mongoose-test/builds/129021352)
+* [travis](https://travis-ci.com/adoxic-401-advanced-javascript/mongoose-test/builds/129189301)
 * [heroku](https://desolate-lake-52490.herokuapp.com/)
 
 ### Setup
